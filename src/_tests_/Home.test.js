@@ -1,9 +1,11 @@
-import render from "@testing-library/react"
+import { screen, render } from "@testing-library/react"
 import Home from "../pages/Home"
 
-describe("<Home/>", () => {
-    it("renders properly", () => {
-        const div = document.createElement("div")
-        render(<Home />, div)
+describe("<Home />", () => {
+    it("renders the home page for the user", () => {
+        render(<Home />)
+        const element = screen.getByText("Free Range Love")
+        expect(element).toBeInTheDocument()
+        screen.logTestingPlaygroundURL()
     })
 })

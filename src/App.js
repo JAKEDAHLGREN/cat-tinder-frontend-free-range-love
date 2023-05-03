@@ -13,14 +13,14 @@ import "./App.css";
 
 function App() {
 	const [cows, setCows] = useState(mockCows)
-	console.log(cows)
+
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cowindex" element={<CowIndex />} />
-        <Route path="/cowshow" element={<CowShow />} />
+        <Route path="/cowshow/:id" element={<CowShow />} />
         <Route path="/cownew" element={<CowNew />} />
         <Route path="/cowedit" element={<CowEdit />} />
         <Route path="*" element={<NotFound />} />

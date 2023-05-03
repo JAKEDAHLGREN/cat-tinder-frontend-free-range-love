@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Where the cows go to mingle</div>
+    <div>Where the cows go to mingle!</div>
   )
 }
 
