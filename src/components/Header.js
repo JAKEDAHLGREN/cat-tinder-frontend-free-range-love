@@ -21,7 +21,6 @@ const Header = () => {
         </NavLink>
       </NavItem>
     </Nav>
-    // <div className='header'>Free Range Love</div>
   )
 }
 
