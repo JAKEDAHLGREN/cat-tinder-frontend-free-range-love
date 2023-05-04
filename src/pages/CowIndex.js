@@ -1,9 +1,26 @@
-import React from 'react'
+import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
+import { NavLink } from "react-router-dom"
 
-const CowIndex = () => {
-  return (
-    <div>All cows</div>
-  )
+const CowIndex = ({ cows }) => {
+	return (
+		<main>
+			{cows?.map((cow, index) => {
+				return (
+						<Card
+							style={{
+								width: "18rem",
+							}}>
+							<img src={cow.image} alt="Sample" />
+							<CardBody>
+								<CardTitle tag="h5">{cow.name}</CardTitle>
+								<CardSubtitle>{cow.age}</CardSubtitle>
+								<NavLink to={`/cowshow/${cow.id}`}>MOOOOORE info</NavLink>
+							</CardBody>
+						</Card>
+				)
+			})}
+		</main>
+	)
 }
 
 export default CowIndex

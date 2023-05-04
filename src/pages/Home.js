@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Free Range Love</div>
+    <div className="title">Free Range Love</div>
   )
 }
 
