@@ -1,23 +1,21 @@
-import { useParams } from 'react-router-dom'
+import { useParams } from "react-router-dom";
 
 const CowShow = ({ cows }) => {
-  const { id } = useParams()
-  let selectedCow = cows.find(cow => cow.id === +id)
+  const { id } = useParams();
+  let selectedCow = cows.find((cow) => cow.id === +id);
 
   return (
     <main>
-      { selectedCow && (
+      {selectedCow && (
         <>
-          <img 
-            alt='send mooods'
-            src={ selectedCow.image}
-          />
-          <h3>{ selectedCow.name } likes {selectedCow.enjoys}</h3>
+          <img alt="send mooods" src={selectedCow.image} />
+          <h3>
+            {selectedCow.name} likes {selectedCow.enjoys}
+          </h3>
         </>
       )}
     </main>
+  );
+};
 
-  )
-}
-
-export default CowShow
+export default CowShow;
