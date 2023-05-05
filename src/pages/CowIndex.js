@@ -6,10 +6,13 @@ const CowIndex = ({ cows }) => {
 		<main>
 			{cows?.map((cow, index) => {
 				return (
-						<Card
+						<Card className='card'
 							style={{
 								width: "18rem",
-							}}>
+							}}
+							
+							key={index}
+							>
 							<img src={cow.image} alt="Sample" />
 							<CardBody>
 								<CardTitle tag="h5">{cow.name}</CardTitle>
