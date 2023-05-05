@@ -1,24 +1,25 @@
-import { BrowserRouter } from "react-router-dom"
 import { render, screen } from "@testing-library/react"
-import Footer from "../components/Footer"
+import userEvent from "@testing-library/user-event"
+import Header from "../components/Header"
+import { BrowserRouter } from "react-router-dom"
 
-describe("<Footer />", () => {
+describe("<Header/>", () => {
 	it("renders without error", () => {
 		render(
 			<BrowserRouter>
-				<Footer />
+				<Header />
 			</BrowserRouter>
 		)
-		const indexLink = screen.getByText(/Where the cows go to mingle!/i)
+		const indexLink = screen.getByText(/meet the cows/i)
 		expect(indexLink).toBeInTheDocument()
 	})
-	it("Footer has clickable links", () => {
+	it("Header has clickable links", () => {
 		render(
 			<BrowserRouter>
-				<Footer />
+				<Header />
 			</BrowserRouter>
 		)
-    const indexLink = screen.getByText("Where the cows go to mingle!")
-    expect(indexLink).toBeInTheDocument()
+		userEvent.click(screen.getByText("Meet the Cows"))
+		expect(screen.getByText("Meet the Cows", { exact: false } )).toBeInTheDocument()
 	})
 })

@@ -1,18 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import CowNew from "../pages/CowNew";
- 
-describe("<CowNew />", () => {
-  it("renders the new cow form", () => {
+import CowEdit from "../pages/CowEdit";
+
+describe("<CowEdit />", () => {
+  it("renders the edit cow form", () => {
     render(
       <BrowserRouter>
-        <CowNew />
-      </BrowserRouter>
+        <CowEdit />
+      </BrowserRouter> 
     );
     const nameInput = screen.getByRole('textbox', { name: /name/i }); 
     expect(nameInput).toBeInTheDocument();
-    
-  
+     
     const ageInput = screen.getByRole('textbox', { name: "Age" });
     expect(ageInput).toBeInTheDocument();
 
