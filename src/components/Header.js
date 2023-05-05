@@ -1,28 +1,9 @@
 import React, { useState } from 'react';
 import { Nav, NavItem, Collapse, Navbar, NavbarToggler, NavbarBrand, NavLink, NavbarText,} from "reactstrap"
-// import { NavLink } from "react-router-dom"
-// import { Button } from "reactstrap"
-
-// const Header = () => {
-// 	return (
-// 		<Nav>
-// 			<NavItem>
-// 				<NavLink to="/"></NavLink>
-// 				<NavItem></NavItem>
-// 				<NavLink to="/cowindex" className="nav-link">
-// 					<Button>Meet the Cows</Button>
-// 				</NavLink>
-// 				<NavItem></NavItem>
-// 				<NavLink to="/cownew" className="nav-link">
-// 					Add a Cow
-// 				</NavLink>
-// 			</NavItem>
-// 		</Nav>
-// 	)
-// }
 
 
-function Header(args) {
+
+const Header = (args) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);

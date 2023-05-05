@@ -14,7 +14,7 @@ import "./App.css"
 const App = () => {
 	const [cows, setCows] = useState(mockCows)
 	const createCow = (createdCow) => {
-    // console.log("created cow: ", createdCow)
+  
   }
 	return (
 		<>
