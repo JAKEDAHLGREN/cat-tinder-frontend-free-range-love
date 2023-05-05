@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import CowNew from "../pages/CowNew";
-
+ 
 describe("<CowNew />", () => {
   it("renders the new cow form", () => {
     render(

@@ -11,7 +11,7 @@ describe("<CowEdit />", () => {
     );
     const nameInput = screen.getByRole('textbox', { name: /name/i }); 
     expect(nameInput).toBeInTheDocument();
-    
+     
     const ageInput = screen.getByRole('textbox', { name: "Age" });
     expect(ageInput).toBeInTheDocument();
 

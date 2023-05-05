@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import CowShow from "../pages/CowShow";
 import mockCows from "../mockCows";
-
+ 
 const renderShow = () => {
     render(
         <MemoryRouter initialEntries={['/cowshow/1']}> 
