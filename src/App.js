@@ -14,8 +14,13 @@ import "./App.css"
 const App = () => {
 	const [cows, setCows] = useState(mockCows)
 	const createCow = (createdCow) => {
-  
-  }
+		console.log("Created cow: ", createdCow)
+	}
+	const updateCow = (cow, id) => {
+		console.log("cow: ", cow)
+		console.log("id: ", id)
+	}
+
 	return (
 		<>
 			<Header />
@@ -24,7 +29,10 @@ const App = () => {
 				<Route path="/cowindex" element={<CowIndex cows={cows} />} />
 				<Route path="/cowshow/:id" element={<CowShow cows={cows} />} />
 				<Route path="/cownew" element={<CowNew createCow={createCow} />} />
-				<Route path="/cowedit" element={<CowEdit />} />
+				<Route
+					path="/cowedit/:id"
+					element={<CowEdit cows={cows} updateCow={updateCow} />}
+				/>
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
