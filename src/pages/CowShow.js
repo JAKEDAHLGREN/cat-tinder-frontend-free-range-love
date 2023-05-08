@@ -4,10 +4,10 @@ import { Button } from "reactstrap"
 const CowShow = ({ cows, deleteCow }) => {
 	const { id } = useParams()
 	const navigate = useNavigate()
-	let selectedCow = cows.find((cow) => cow.id === +id)
+	let selectedCow = cows?.find((cow) => cow.id === +id)
 
-	const handleSubmit = () => {
-		deleteCow(id)
+	const handleSubmit = (selectedCow) => {
+		deleteCow(selectedCow.id)
 		navigate("/cowindex")
 	}
 	return (
