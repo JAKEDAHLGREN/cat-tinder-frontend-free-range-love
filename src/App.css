@@ -14,28 +14,42 @@
   text-align: center;
   }
 .footer {
-  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, 2px 2px 2px rgba(180,137,49,0);
+  text-shadow: 1px 0px 1px #8b8989, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, 2px 2px 2px rgba(180,137,49,0);
   background-image: url('https://img.freepik.com/premium-photo/green-grass-background-football-field_41969-2262.jpg?w=2000');
-  position: fixed;
+  position:fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
-  height: 50px;
+  height: 40px;
+}
+.cards-container {
+  display: flex !important;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
 }
 .card {
   background: #78CE07;
-background: -moz-radial-gradient(center, #78CE07 0%, #348D12 50%, #185009 100%);
-background: -webkit-radial-gradient(center, #78CE07 0%, #348D12 50%, #185009 100%);
-background: radial-gradient(ellipse at center, #78CE07 0%, #348D12 50%, #185009 100%);
+  background: -moz-radial-gradient(center, #78CE07 0%, #348D12 50%, #185009 100%);
+  background: -webkit-radial-gradient(center, #78CE07 0%, #348D12 50%, #185009 100%);
+  background: radial-gradient(ellipse at center, #78CE07 0%, #348D12 50%, #185009 100%);
+}
+.link-color {
+  color: black;
 }
  body {
-
   background: #D0E4F5 url("https://cdn.shopify.com/s/files/1/1257/3603/products/T4888-16-Sky.jpg?v=1627922045") no-repeat scroll -3px -50px;
   background-size: cover;
   height: 100vh;
   width: auto;
-  font-size: large;
-  
+  font-size: large; 
+}
+.not-found {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/10/Skinny_cow_crossing_%2814986953436%29.jpg") !important;
+  background-size: contain;
+  height:100vh;
 }
 

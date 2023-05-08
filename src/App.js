@@ -41,7 +41,7 @@ const App = () => {
 	}
 
 	const updateCow = (selectedCow, id) => {
-		fetch(`http://localhost:300/cows/${id}`, {
+		fetch(`http://localhost:3000/cows/${id}`, {
 			body: JSON.stringify(selectedCow),
 			headers: {
 				"Content-Type": "application/json"
@@ -54,15 +54,15 @@ const App = () => {
 	}
 
 	const deleteCow = (id) => {
-		fetch(`http://localhost:3000/cats/${id}`, {
+		fetch(`http://localhost:3000/cows/${id}`, {
 			headers: {
 				"Content-Type": "application/json"
 			},
 			method: "DELETE"
 		})
 		.then(response => response.json())
-		.then(payload => readCow())
-		.catch(error => console.log("Delete errors: ", error))
+		.then(() => readCow())
+		.catch(errors => console.log("Delete errors: ", errors))
 	}
 
 	return (
