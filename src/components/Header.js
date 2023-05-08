@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Nav, NavItem, Collapse, Navbar, NavbarToggler, NavbarBrand, NavLink } from "reactstrap"
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom'
+import { Nav, NavItem, Collapse, Navbar, NavbarToggler, NavbarBrand } from "reactstrap"
 
 
 
@@ -16,7 +17,7 @@ const Header = (args) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/cowindex">Meet the Cows</NavLink>
+              <NavLink href="/cowindex">Meet the Grade A Beefcakes</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/cownew">

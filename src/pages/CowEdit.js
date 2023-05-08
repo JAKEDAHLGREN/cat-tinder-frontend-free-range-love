@@ -4,29 +4,30 @@ import { useNavigate, useParams } from "react-router-dom"
 
 const CowEdit = ({ cows, updateCow }) => {
 	const { id } = useParams()
+	const navigate = useNavigate()
 	let currentCow = cows?.find((cow) => cow.id === +id)
+
 	const [editCow, setEditCow] = useState({
-		name: "updateCow.name",
-		age: "updateCow.age",
-		enjoys: "updateCow.enjoys",
-		color: "updateCow.color",
-		species: "updateCow.species",
-		image: "updateCow.image"
+		name: currentCow.name,
+		age: currentCow.age,
+		enjoys: currentCow.enjoys,
+		color: currentCow.color,
+		species: currentCow.species,
+		image: currentCow.image,
 	})
 
 	const handleChange = (e) => {
 		setEditCow({ ...editCow, [e.target.name]: e.target.value })
 	}
-	const navigate = useNavigate()
+
 	const handleSubmit = () => {
 		updateCow(editCow, currentCow.id)
-		navigate("/cowindex")
-    console.log(editCow)
+		navigate(`/cowshow/${id}`)
 	}
 
 	return (
 		<>
-			<Form>
+			<Form className="cow-form">
 				<Row>
 					<Col md={6}>
 						<FormGroup>
@@ -34,7 +35,7 @@ const CowEdit = ({ cows, updateCow }) => {
 							<Input
 								id="cow-name"
 								name="name"
-								placeholder="Enter Cow Name"
+								placeholder="Enter Cow's Name"
 								type="text"
 								onChange={handleChange}
 								value={editCow.name}
@@ -47,7 +48,7 @@ const CowEdit = ({ cows, updateCow }) => {
 							<Input
 								id="cow-age"
 								name="age"
-								placeholder="Enter Cow Age"
+								placeholder="Enter Cow's Age"
 								type="text"
 								onChange={handleChange}
 								value={editCow.age}
@@ -67,27 +68,27 @@ const CowEdit = ({ cows, updateCow }) => {
 					/>
 				</FormGroup>
 				<FormGroup>
-					<Label for="cow-species">Species</Label>
+					<Label for="cow-color">Color</Label>
 					<Input
-						id="cow-species"
-						name="species"
-						placeholder="Enter Cow Species"
+						id="cow-color"
+						name="color"
+						placeholder="Enter Cow Color"
 						type="text"
 						onChange={handleChange}
-						value={editCow.species}
+						value={editCow.color}
 					/>
 				</FormGroup>
 				<Row>
 					<Col md={6}>
 						<FormGroup>
-							<Label for="cow-color">Color</Label>
+							<Label for="cow-species">Species</Label>
 							<Input
-								id="cow-color"
-								name="color"
-								placeholder="Enter Cow Color"
+								id="cow-species"
+								name="species"
+								placeholder="What Species Does The Cow Identify As?"
 								type="text"
 								onChange={handleChange}
-								value={editCow.color}
+								value={editCow.species}
 							/>
 						</FormGroup>
 					</Col>
@@ -97,7 +98,7 @@ const CowEdit = ({ cows, updateCow }) => {
 							<Input
 								id="cow-image"
 								name="image"
-								placeholder="Enter Image URL"
+								placeholder="Enter Cow's Image URL"
 								type="text"
 								onChange={handleChange}
 								value={editCow.image}
@@ -106,7 +107,9 @@ const CowEdit = ({ cows, updateCow }) => {
 					</Col>
 				</Row>
 
-				<Button onClick={handleSubmit} name="submit">Submit updated cow</Button>
+				<Button onClick={handleSubmit} name="submit">
+					Submit Updated Cow
+				</Button>
 			</Form>
 		</>
 	)

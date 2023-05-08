@@ -1,8 +1,11 @@
 import React from 'react'
 
 const NotFound = () => {
+
   return (
-    <div>Out to pasture</div>
+    <>
+      <h2 className="not-found">Out to pasture</h2>
+    </>
   )
 }
 
