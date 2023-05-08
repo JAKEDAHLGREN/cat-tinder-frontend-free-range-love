@@ -14,7 +14,7 @@ const CowIndex = ({ cows }) => {
 							}}
 							key={index}
 							>
-							<img src={cow.image} alt="Sample" />
+							<img src={cow.image} alt="Sample" style={{ width: "18rem", height:"20rem"}} />
 							<CardBody>
 								<CardTitle tag="name-tag">
 									{cow.name}
@@ -22,8 +22,8 @@ const CowIndex = ({ cows }) => {
 								<CardSubtitle>
 									{cow.age}
 								</CardSubtitle>
-								<NavLink to={`/cowshow/${cow.id}`}>
-									MOOOOORE Info
+								<NavLink className="link-color"to={`/cowshow/${cow.id}`}>
+									🐮 MOOOOORE Info 🐮
 								</NavLink>
 							</CardBody>
 						</Card>

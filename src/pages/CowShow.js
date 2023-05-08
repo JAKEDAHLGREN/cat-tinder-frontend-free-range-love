@@ -17,9 +17,7 @@ const CowShow = ({ cows, deleteCow }) => {
 					<img alt="send mooods" src={selectedCow.image} />
 
 					<h3>
-						{selectedCow.name} likes {selectedCow.enjoys}. They are{" "}
-						{selectedCow.color} in color, and identifies as a{" "}
-						{selectedCow.species} cow.
+						{selectedCow.name} likes {selectedCow.enjoys}. {selectedCow.name} is {selectedCow.color} in color, and belongs to the species {selectedCow.species}.
 					</h3>
 				</>
 			)}
