@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Header from "./components/Header"
@@ -8,17 +8,61 @@ import CowNew from "./pages/CowNew"
 import CowShow from "./pages/CowShow"
 import NotFound from "./pages/NotFound"
 import Footer from "./components/Footer"
-import mockCows from "./mockCows"
 import "./App.css"
 
 const App = () => {
-	const [cows, setCows] = useState(mockCows)
-	const createCow = (createdCow) => {
-		console.log("Created cow: ", createdCow)
+	
+	const [cows, setCows] = useState([])
+	
+	useEffect(() => {
+		readCow() 
+	}, [])
+
+	const readCow = () => {
+		fetch("http://localhost:3000/cows")
+		.then(response => response.json())
+		.then(payload => {
+			setCows(payload)
+		})
+		.catch(error => console.log("Cow read errors: ", error))
 	}
-	const updateCow = (cow, id) => {
-		console.log("cow: ", cow)
-		console.log("id: ", id)
+
+	const createCow = (createdCow) => {
+		fetch("http://localhost:3000/cows", {
+			body: JSON.stringify(createdCow),
+			headers: {
+				"Content-Type": "application/json"
+			},
+			method: "POST"
+		})
+		.then(response => response.json())
+		.then(() => readCow())
+		.catch(error => console.log("Create cow errors: ", error))
+	}
+
+	const updateCow = (selectedCow, id) => {
+		fetch(`http://localhost:300/cows/${id}`, {
+			body: JSON.stringify(selectedCow),
+			headers: {
+				"Content-Type": "application/json"
+			},
+			method: "PATCH"
+		})
+		.then(response => response.json())
+		.then(() => readCow())
+		.catch(error => console.log("Update Cow errors: ", error))
+	}
+
+	const deleteCow = (id) => {
+		fetch(`http://localhost:3000/cats/${id}`, {
+			headers: {
+				"Content-Type": "application/json"
+			},
+			method: "DELETE"
+		})
+		.then(response => response.json())
+		.then(payload => readCow())
+		.catch(error => console.log("Delete errors: ", error))
 	}
 
 	return (
@@ -27,12 +71,9 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/cowindex" element={<CowIndex cows={cows} />} />
-				<Route path="/cowshow/:id" element={<CowShow cows={cows} />} />
+				<Route path="/cowshow/:id" element={<CowShow cows={cows} deleteCow={deleteCow} />} />
 				<Route path="/cownew" element={<CowNew createCow={createCow} />} />
-				<Route
-					path="/cowedit/:id"
-					element={<CowEdit cows={cows} updateCow={updateCow} />}
-				/>
+				<Route path="/cowedit/:id" element={<CowEdit cows={cows} updateCow={updateCow} />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
