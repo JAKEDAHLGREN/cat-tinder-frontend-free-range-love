@@ -12,17 +12,17 @@ const Header = (args) => {
   return (
     <div className='nav'>
       <Navbar {...args}>
-        <NavbarBrand href="/">Free Range Love</NavbarBrand>
+        <NavbarBrand href="/" className='title-font'>Free Range Love</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
 
-              <NavLink href="/cowindex" className='nav-cows'>Meet the Cows</NavLink>
-              <NavLink href="/cowindex">Meet the Grade A Beefcakes</NavLink>
+              <NavLink to="/cowindex" className='nav-cows'>Meet the Grade A Beefcakes</NavLink>
+            
             </NavItem>
             <NavItem>
-              <NavLink href="/cownew">
+              <NavLink to="/cownew">
                 Add a Cow
               </NavLink>
             </NavItem>
