@@ -16,7 +16,7 @@ const Header = (args) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/cowindex">Meet the Cows</NavLink>
+              <NavLink href="/cowindex" className='nav-cows'>Meet the Cows</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/cownew">
