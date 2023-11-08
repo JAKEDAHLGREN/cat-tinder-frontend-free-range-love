@@ -25,6 +25,60 @@ const mockCows = [
     color:"Tan",
     species:"Texas Longhorn",
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlcAvtAPR68NNeCoNRoOBSLJZ3C2kJ1BvWuc1p68H0lG219TzBbdTAIPjergVYVxETB70&usqp=CAU"
+  },
+  {
+    id: 4,
+    name:"Daisy",
+    age: 4,
+    enjoys:"Loves grazing in open fields, enjoys long walks by the barn, and is passionate about organic farming.",
+    color:"Brown and White",
+    species:"Holstein Friesian",
+    image:"https://cdn.britannica.com/11/136111-050-174C2796/Holstein-cow.jpg"
+  },
+  {
+    id: 5,
+    name:"Maverick",
+    age: 6,
+    enjoys:"Enjoys listening to country music, loves exploring new pastures, and is a fan of cowboy poetry.",
+    color:"Black",
+    species:"Angus",
+    image:"https://cdn.globalagmedia.com/cattle/Breeds/SS_Angus_Bull.jpg"
+  },
+  {
+    id: 7,
+    name:"Rosie",
+    age: 5,
+    enjoys:"Passionate about environmental conservation, enjoys sunbathing in the meadow, and loves cuddling under the stars.",
+    color:"Reddish-Brown",
+    species:"Hereford",
+    image:"https://upload.wikimedia.org/wikipedia/commons/f/f3/Hereford_bull_large.jpg"
+  },
+  {
+    id: 8,
+    name:"Ferdinand",
+    age: 3,
+    enjoys:"Enjoys gardening, loves the aroma of fresh flowers, and is a vegetarian food enthusiast.",
+    color:"White",
+    species:"Charolais",
+    image:"https://cdn.britannica.com/45/76945-050-0B3C42A7/Charolais-bull.jpg"
+  },
+  {
+    id: 9,
+    name:"Luna",
+    age: 2,
+    enjoys:"Enthusiastic stargazer, enjoys moonlit walks, and loves storytelling under the night sky.",
+    color:"Grey",
+    species:"Jersey",
+    image:"https://ucanr.edu/blogs/UCCESonoma/blogfiles/64854_original.jpg"
+  },
+  {
+    id: 10,
+    name:"Thunder",
+    age: 7,
+    enjoys:"Loves thunderstorms, enjoys mud baths, and is a passionate advocate for animal rights.",
+    color:"Dark Brown",
+    species:"Highland",
+    image:"https://melissaknorris.com/wp-content/uploads/2023/01/Scottish-Highland-Cow_Face_MKN-1024x683.jpg"
   }
 ]
 

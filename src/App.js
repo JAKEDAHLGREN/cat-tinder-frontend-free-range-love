@@ -9,22 +9,24 @@ import CowShow from "./pages/CowShow"
 import NotFound from "./pages/NotFound"
 import Footer from "./components/Footer"
 import "./App.css"
+import mockCows from "../src/mockCows"
 
 const App = () => {
 	
 	const [cows, setCows] = useState([])
 	
 	useEffect(() => {
-		readCow() 
+		readCow(mockCows) 
 	}, [])
 
-	const readCow = () => {
-		fetch("http://localhost:3000/cows")
-		.then(response => response.json())
-		.then(payload => {
-			setCows(payload)
-		})
-		.catch(error => console.log("Cow read errors: ", error))
+	const readCow = (data) => {
+		setCows(data)
+		// fetch("http://localhost:3000/cows")
+		// .then(response => response.json())
+		// .then(payload => {
+		// 	setCows(payload)
+		// })
+		// .catch(error => console.log("Cow read errors: ", error))
 	}
 
 	const createCow = (createdCow) => {
@@ -76,7 +78,7 @@ const App = () => {
 				<Route path="/cowedit/:id" element={<CowEdit cows={cows} updateCow={updateCow} />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	)
 }
