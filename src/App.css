@@ -1,55 +1,104 @@
-.nav {
-    display: flex;
-    justify-content: center;
-    /* background-image: url('https://img.freepik.com/premium-photo/green-grass-background-football-field_41969-2262.jpg?w=2000') !important; */
-  
-    
+body, html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-.title-font {
-  font-size: large !important; 
-  color: red !important;
-}
-.title {
-  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, 2px 2px 2px rgba(180,137,49,0);
-  text-align: center;
-  }
-.footer {
-  text-shadow: 1px 0px 1px #8b8989, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, 2px 2px 2px rgba(180,137,49,0);
-  background-image: url('https://img.freepik.com/premium-photo/green-grass-background-football-field_41969-2262.jpg?w=2000');
-  position:fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  height: 40px;
-}
-.cards-container {
-  display: flex !important;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-bottom: 50px;
-}
-.card {
-  background: #78CE07;
-  background: -moz-radial-gradient(center, #78CE07 0%, #348D12 50%, #185009 100%);
-  background: -webkit-radial-gradient(center, #78CE07 0%, #348D12 50%, #185009 100%);
-  background: radial-gradient(ellipse at center, #78CE07 0%, #348D12 50%, #185009 100%);
-}
-.link-color {
-  color: black;
-}
- body {
-  background: #D0E4F5 url("https://cdn.shopify.com/s/files/1/1257/3603/products/T4888-16-Sky.jpg?v=1627922045") no-repeat scroll -3px -50px;
+body{
+  background:
+    url('https://cdn.shopify.com/s/files/1/1257/3603/products/T4888-16-Sky.jpg?v=1627922045');
   background-size: cover;
+  background-position: center !important;
   height: 100vh;
   width: auto;
-  font-size: large; 
+  font-size: large;
+  overflow: hidden !important;
+ 
+}
+.nav {
+	display: flex;
+	justify-content: center;
+	/* background-image: url('https://img.freepik.com/premium-photo/green-grass-background-football-field_41969-2262.jpg?w=2000') !important; */
+}
+.title-font {
+	font-size: xx-large !important;
+  font-weight: bolder;
+	color: rgb(158, 16, 16) !important;
+}
+.title {
+	text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+		1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+		4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
+		4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
+		7px 6px 1px #cccccc, 2px 2px 2px rgba(180, 137, 49, 0);
+	text-align: center;
+  margin-top:auto !important;
+}
+.footer {
+	text-shadow: 1px 0px 1px #8b8989, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+		1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+		4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
+		4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
+		7px 6px 1px #cccccc, 2px 2px 2px rgba(180, 137, 49, 0);
+	background-image: url('https://img.freepik.com/premium-photo/green-grass-background-football-field_41969-2262.jpg?w=2000');
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 40px;
+}
+.cards-container {
+	display: flex !important;
+	align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+  padding: 20px;
+  color: white;
+  overflow-y: auto;
+  max-height: 100dvh;
+  gap: 4px;
+  margin-top: 30px;
+  padding-bottom: 90px;
+}
+.card {
+	background: #78ce07;
+	background: -moz-radial-gradient(
+		center,
+		#78ce07 0%,
+		#348d12 50%,
+		#185009 100%
+	);
+	background: -webkit-radial-gradient(
+		center,
+		#78ce07 0%,
+		#348d12 50%,
+		#185009 100%
+	);
+	background: radial-gradient(
+		ellipse at center,
+		#78ce07 0%,
+		#348d12 50%,
+		#185009 100%
+	);
+
+	border: #114703 !important;
+	border-style: solid !important;
+	border-width: 3px !important;
+	border-radius: 5% !important;
+  margin-top: 50px;
+  text-align: center !important;
+  align-items: center !important;
+}
+.card-image {
+	border-radius: 7% !important;
+	padding: 12px 12px 0px 12px !important;
+}
+.link-color {
+	color: rgb(39, 17, 182);
 }
 .not-found {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/10/Skinny_cow_crossing_%2814986953436%29.jpg") !important;
-  background-size: contain;
-  height:100vh;
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/10/Skinny_cow_crossing_%2814986953436%29.jpg') !important;
+	background-size: contain;
+	height: 100vh;
 }
-

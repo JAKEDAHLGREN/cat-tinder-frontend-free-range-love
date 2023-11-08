@@ -14,7 +14,7 @@ const CowIndex = ({ cows }) => {
 							}}
 							key={index}
 							>
-							<img src={cow.image} alt="Sample" style={{ width: "18rem", height:"20rem"}} />
+							<img className='card-image' src={cow.image} alt="Sample" style={{ width: "18rem", height:"20rem"}} />
 							<CardBody>
 								<CardTitle tag="name-tag">
 									{cow.name}
